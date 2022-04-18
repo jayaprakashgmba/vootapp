@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jayaprakashgmbavootapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jayaprakashgmbavootapp
+  template:
+    metadata:
+      labels:
+        app: jayaprakashgmbavootapp 
+    spec:
+      containers:
+        - name: jayaprakashgmbavootapp 
+          image: jpregistry123.azurecr.io/jayaprakashgmbavootapp
+          ports:
+          - containerPort: 80
